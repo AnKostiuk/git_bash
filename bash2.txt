@@ -1,0 +1,49 @@
+1. touch bash2.txt - Предварительно создайте файл bash2.txt, в который вы будете добавлять выполненные команды.
+
+2. cd - Зайти в домашнюю директорию через терминал.
+
+3. mkdir test3 - Создать папку test 3
+
+4. echo -e "row1\nrow2\nrow3\nrow4" > test3/4
+   echo -e "row1\nrow2\nrow3\nrow4" > test3/5
+   echo -e "row1\nrow2\nrow3\nrow4" > test3/6   - Добавить в папку test 3 три файла 4, 5 и 6, в каждом из которых должно быть по 4 строки row1, row2, row3, row4
+
+7. grep "row2" test3/5 - Найдите строку row2 в файле 5
+
+8. grep "row" test3/* - Найдите строку row в папке test3
+
+9. grep -c "row" test3/6 - Посчитайте сколько строк с содержимым row в файле 6
+
+10. find test3 -name "5" - Найдите файл 5 внутри папки test3
+
+11. find test3 -name "5" -delete - Используя команду find, удалите файл 5
+
+12. cat <(echo "test") test3/4 - Используя команду echo, добавьте слово test в файл 4 (без сохранения содержимого)
+
+13. cat <(echo "test") test3/4 | sed 's/test/fail/g' - Замените слово test в файле 4 на fail
+
+14. echo "test" >> test3/4 - Добавьте в файл 4 слово test так, чтобы сохранилось содержимое
+
+15. ps aux - Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе
+
+16. kill 666 - Убейте процесс 666 в консоли (можно не убивать, а просто написать команду)
+
+17. ping rusau.net - Узнайте доступность ресурса rusau.net, используя ping
+
+18. ping -c 5 rusau.net - Отправьте 5 пакетов на сайт rusau.net
+
+19. curl -X GET "https://petstore.swagger.io/v2/pet/findByStatus?status=available,sold,pending" - Используя GET и команду curl, получите информацию о зарегистрированных питомцах с любым статусом на https://petstore.swagger.io/
+
+20. curl -X POST "https://petstore.swagger.io/v2/user" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": 0,
+    "username": "string",
+    "firstName": "string",
+    "lastName": "string",
+    "email": "string",
+    "password": "string",
+    "phone": "string",
+    "userStatus": 0
+  }' 
+  - Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/
